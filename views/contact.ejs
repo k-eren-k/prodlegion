@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim - Legion</title>
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="İletişim - Legion">
+    <meta property="og:description" content="Get in touch with Legion through our social media and contact details. Connect with us now!">
+    <meta property="og:image" content="/img/Logov.png"> <!-- Replace with the appropriate image URL -->
+    <meta property="og:url" content="https://yourwebsite.com/contact"> <!-- Replace with your contact page URL -->
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="İletişim - Legion">
+    <meta name="twitter:description" content="Get in touch with Legion through our social media and contact details. Connect with us now!">
+    <meta name="twitter:image" content="/img/Logov.png"> <!-- Replace with the appropriate image URL -->
+    <meta name="twitter:url" content="https://yourwebsite.com/contact"> <!-- Replace with your contact page URL -->
+    
     <link rel="stylesheet" href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css">
     <link rel="icon" type="image/png" href="/img/logov.png">
     <link rel="stylesheet" href="/css/contact.css">
@@ -39,39 +54,39 @@
         </section>
     </main>
     <%- include('includes/footer') %>
-<%- include('includes/scroll-button') %>
+    <%- include('includes/scroll-button') %>
     <script src="/js/contact.js"></script>
- <script>
-const socialIcons = document.querySelectorAll('.social-icon');
+    <script>
+        const socialIcons = document.querySelectorAll('.social-icon');
 
-socialIcons.forEach(icon => {
-    icon.addEventListener('click', () => {
-        const altText = icon.querySelector('img').alt;
-        let url;
+        socialIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                const altText = icon.querySelector('img').alt;
+                let url;
 
-        switch (altText) {
-            case 'Youtube':
-                url = 'https://www.youtube.com/@prodlegion';
-                break;
-            case 'Spotify':
-                url = 'https://open.spotify.com/intl-tr/artist/2J4vMbAvwGpCXqtvbjD3Xx?si=bZH0-sMWR-uoQayJH2adPA&nd=1&dlsi=5a46fb730eb54852';
-                break;
-            case 'Instagram':
-                url = 'https://www.instagram.com/prodlegion/';
-                break;
-            case 'TikTok':
-                url = 'https://www.tiktok.com/@prod.legion?is_from_webapp=1&sender_device=pc';
-                break;
-            case 'Apple Music':
-                url = 'https://music.apple.com/tr/artist/l-e-g-i-o-n/1607492453';
-                break;
-        }
+                switch (altText) {
+                    case 'Youtube':
+                        url = 'https://www.youtube.com/@prodlegion';
+                        break;
+                    case 'Spotify':
+                        url = 'https://open.spotify.com/intl-tr/artist/2J4vMbAvwGpCXqtvbjD3Xx?si=bZH0-sMWR-uoQayJH2adPA&nd=1&dlsi=5a46fb730eb54852';
+                        break;
+                    case 'Instagram':
+                        url = 'https://www.instagram.com/prodlegion/';
+                        break;
+                    case 'TikTok':
+                        url = 'https://www.tiktok.com/@prod.legion?is_from_webapp=1&sender_device=pc';
+                        break;
+                    case 'Apple Music':
+                        url = 'https://music.apple.com/tr/artist/l-e-g-i-o-n/1607492453';
+                        break;
+                }
 
-        if (url) {
-            window.open(url, '_blank'); // Yeni sekmede aç
-        }
-    });
-});
-</script>
+                if (url) {
+                    window.open(url, '_blank'); // Yeni sekmede aç
+                }
+            });
+        });
+    </script>
 </body>
 </html>
