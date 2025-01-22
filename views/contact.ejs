@@ -41,6 +41,37 @@
     <%- include('includes/footer') %>
 <%- include('includes/scroll-button') %>
     <script src="/js/contact.js"></script>
+ <script>
+const socialIcons = document.querySelectorAll('.social-icon');
 
+socialIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        const altText = icon.querySelector('img').alt;
+        let url;
+
+        switch (altText) {
+            case 'Youtube':
+                url = 'https://www.youtube.com/@prodlegion';
+                break;
+            case 'Spotify':
+                url = 'https://open.spotify.com/intl-tr/artist/2J4vMbAvwGpCXqtvbjD3Xx?si=bZH0-sMWR-uoQayJH2adPA&nd=1&dlsi=5a46fb730eb54852';
+                break;
+            case 'Instagram':
+                url = 'https://www.instagram.com/prodlegion/';
+                break;
+            case 'TikTok':
+                url = 'https://www.tiktok.com/@prod.legion?is_from_webapp=1&sender_device=pc';
+                break;
+            case 'Apple Music':
+                url = 'https://music.apple.com/tr/artist/l-e-g-i-o-n/1607492453';
+                break;
+        }
+
+        if (url) {
+            window.open(url, '_blank'); // Yeni sekmede aç
+        }
+    });
+});
+</script>
 </body>
 </html>
