@@ -1,0 +1,696 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.header {
+    height: 660px;
+    width: 100%;
+    background-color: black;
+    background: url("/img/giris2home2.png");
+    display: flex;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-container {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.legion-buttons {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    gap: 15px;
+}
+
+.legion-buttons a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 16.2px;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.15s ease;
+}
+
+.legion-buttons a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #f9b5cfb6,
+        0 0 40px #f9b5cfb6, 0 0 50px #f9b5cfb6, 0 0 75px #f9b5cfb6,
+        0 0 100px #f9b5cfb6;
+}
+
+.legion-buttons a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff50;
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+    transition: width 0.4s ease-in-out;
+}
+
+.legion-buttons a:hover::after {
+    width: 100%;
+}
+
+.header-main {
+    width: auto;
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tag-img {
+    margin-top: -60px;
+    margin-bottom: -50px;
+    width: 550px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.giris-logo {
+    display: flex;
+    margin-top: -80px;
+    object-fit: contain;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}
+
+.scroll-img {
+    height: 100px;
+    width: 45px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        display: block;
+    }
+
+    .header {
+        height: 510px;
+    }
+
+    .header-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .navbar {
+        align-items: center;
+        margin-bottom: 20px;
+        display: flex;
+    }
+
+    .logo {
+        width: 100px;
+        height: 60px;
+    }
+
+    .legion-buttons {
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: left;
+        gap: 10px;
+        background-color: rgba(27, 27, 27, 0.144);
+        border-radius: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.048);
+        backdrop-filter: blur(11px);
+        position: absolute;
+        top: 55px;
+        width: calc(200px - 40px);
+        right: 10px;
+        align-items: flex-start;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .legion-buttons.show {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .menu-button {
+        font-size: 20px;
+        color: white;
+        background: transparent;
+        border: none;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .tag-img {
+        width: 100%;
+        max-width: 550px;
+    margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .giris-logo {
+        display: flex;
+        object-fit: contain;
+        margin-top: 0px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .scroll-img {
+        height: 70px;
+        width: auto;
+        display: flex;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: contain;
+    }
+}
+
+.istek-cont {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.h1 {
+    font-size: 35.1px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: rgba(5, 5, 5, 0.938);
+}
+
+.desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    font-size: 17.5px;
+    margin-top: -3px;
+    margin-bottom: 20px;
+    color: #131313a8;
+}
+
+.istek-cont a {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #f8f8f8;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.712);
+    border-radius: 100px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.15s ease;
+}
+
+.istek-cont a img {
+    height: 30px;
+    width: 28px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.istek-cont a:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px #8289aa80;
+    border-radius: 100px;
+    font-weight: 500;
+    color: black;
+}
+
+.lisans {
+    margin-top: 135px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plans {
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plan {
+    width: calc((1280px / 3) - 78px);
+    font-family: "Poppins", sans-serif;
+    background-color: #ececec59;
+    border-radius: 25px;
+    padding: 24px;
+}
+
+.plan-title {
+    margin-bottom: -7px;
+    font-size: 30px;
+}
+
+.plan-fiyat {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.815);
+}
+
+.ozellikler {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ozellikler p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.699);
+}
+
+.satin-al {
+    width: 100%;
+    border-radius: 100px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: white;
+    background: rgb(255, 150, 204);
+    background: linear-gradient(35deg,
+            rgba(255, 150, 204, 1) 0%,
+            rgba(253, 199, 227, 1) 35%,
+            rgba(255, 150, 187, 1) 75%,
+            rgba(255, 114, 191, 1) 100%);
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+    background-size: 300% 300%;
+}
+
+.satin-al:hover {
+    animation: gradientAnimation 1.5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(46, 46, 46);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(46, 46, 46);
+}
+
+@media (max-width: 768px) {
+    .istek-cont {
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+
+    .h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .desc {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .islem-cont a {
+        height: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+    .lisans {
+        margin-top: 60px;
+    }
+
+    .plans {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .plan {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .plan-title {
+        font-size: 24px;
+    }
+
+    .plan-fiyat {
+        font-size: 14px;
+    }
+
+    .satin-al {
+        font-size: 14px;
+        height: 45px;
+    }
+
+
+}
+
+.spotfy {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 135px;
+
+    background: url(/img/giris2home2.png);
+    background-size: cover;
+    margin-top: 110px;
+    background-position: center;
+}
+
+iframe {
+    height: 380px;
+    width: 1000px;
+}
+
+.spotfy-cont {
+    width: 1280px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    align-items: center;
+    text-align: left;
+
+    justify-content: space-between;
+}
+
+.sp-title {
+    color: white;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.sp-desc {
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 18px;
+    margin-bottom: -3px;
+}
+
+.spotfy-left {
+    width: 100%;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotfy-button {
+    display: flex;
+    height: 55px;
+    padding-left: 20px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-right: 20px;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 500;
+    width: 164px;
+    border-radius: 100px;
+    gap: 10px;
+    transition: all 0.2s ease;
+    background-color: #24cf57;
+}
+
+.spotfy-button:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 0px 15px #24cf57;
+}
+
+.spotfy-button img {
+    height: 27px;
+    width: 27px;
+}
+
+@media screen and (max-width: 768px) {
+    .spotfy {
+        height: auto;
+        padding: 40px 0;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spotfy-cont {
+        width: 100%;
+        flex-direction: column;
+        padding: 0 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 440px;
+        display: block;
+    }
+
+    .spotfy-left {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        order: 2;
+    }
+
+    .sp-title {
+        justify-content: center;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .sp-desc {
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .spotfy-button {
+        margin: 20px auto 0;
+    }
+}
+
+
+.contact-section {
+    max-width: 1280px;
+    margin: 50px auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 1280px;
+    min-width: 1280px;
+    max-height: 250px;
+    outline: none;
+    background-color: #f9f9f92a;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ec4899;
+    background-color: #fff;
+}
+
+/* Gönder Butonu */
+.submit-btn {
+    cursor: pointer;
+    width: 280px;
+    border-radius: 100px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding-left: 20px;
+    color: white;
+    border: none;
+    background: rgb(255, 150, 204);
+    background: linear-gradient(35deg,
+            rgba(255, 150, 204, 1) 0%,
+            rgba(253, 199, 227, 1) 35%,
+            rgba(255, 150, 187, 1) 75%,
+            rgba(255, 114, 191, 1) 100%);
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+    background-size: 300% 300%;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    animation: gradientAnimation 1.5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mobilde düzeltmeler */
+@media (max-width: 768px) {
+    .contact-section {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%; /* Mobilde genişliği tamamen doldur */
+        max-width: 100%; /* Aşırı genişliği önle */
+        min-width: unset; /* Sabit genişliklerden kurtul */
+    }
+
+    .form-group textarea {
+        max-height: unset; /* Aşırı yüksekliği kaldır */
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        display: block;
+        width: 100%; /* Genişlik tüm alana yayılsın */
+        margin: 10px auto;
+        height: 50px;
+        padding: 0;
+        text-align: center;
+    }
+}

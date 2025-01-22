@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzikler - Legion</title>
+    <link rel="stylesheet" href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css">
+    <link rel="stylesheet" href="/css/music.css">
+</head>
+<body>
+    <%- include('includes/header') %>
+    <main>
+        <section id="muzikler">
+            <h1 class="h1">Müziklerim</h1>
+            <p class="desc">Müziklerim Tam Halini Dinlemek İçin Üzerine Tıklayın</p>
+
+            <div class="video-container">
+              <div id="player"></div>
+            </div>
+
+            <div class="music-list">
+                <% videos.forEach(function(video, index) { %>
+                    <div class="music-item" data-video-id="<%= video.videoId %>" data-index="<%= (currentPage - 1) * 15 + index %>">
+                        <span class="music-title"><%= video.title %></span>
+                        <div class="controls">
+                            <button class="prev-button" onclick="playPrevious(<%= (currentPage - 1) * 15 + index %>)">
+                                <i class="fa-regular fa-angle-left"></i>
+                            </button>
+                            <button class="play-button" onclick="togglePlay('<%= video.videoId %>', this)">
+                                <i class="fa-regular fa-play"></i>
+                            </button>
+                            <button class="next-button" onclick="playNext(<%= (currentPage - 1) * 15 + index %>)">
+                                <i class="fa-regular fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+
+            <div class="pagination">
+                <% if (currentPage > 1) { %>
+                    <a href="/music?page=<%= currentPage - 1 %>" class="page-link prev">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                <% } %>
+            
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                    <a href="/music?page=<%= i %>" class="page-link <%= currentPage === i ? 'active' : '' %>"><%= i %></a>
+                <% } %>
+            
+                <% if (currentPage < totalPages) { %>
+                    <a href="/music?page=<%= currentPage + 1 %>" class="page-link next">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                <% } %>
+            </div>
+    </main>
+
+    <%- include('includes/footer') %>
+    <%- include('includes/scroll-button') %>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/js/music.js"></script>
+</body>
+</html>

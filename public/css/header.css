@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: black;
+    background: url("/img/giris2home2.png");
+    display: flex;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-container {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.legion-buttons {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    gap: 15px;
+}
+
+.legion-buttons a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 16.2px;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.15s ease;
+}
+
+.legion-buttons a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #f9b5cfb6,
+        0 0 40px #f9b5cfb6, 0 0 50px #f9b5cfb6, 0 0 75px #f9b5cfb6,
+        0 0 100px #f9b5cfb6;
+}
+
+.legion-buttons a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff50;
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+    transition: width 0.4s ease-in-out;
+}
+
+.legion-buttons a:hover::after {
+    width: 100%;
+}
+
+.header-main {
+    width: auto;
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tag-img {
+    margin-top: -60px;
+    margin-bottom: -50px;
+    width: 550px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.giris-logo {
+    display: flex;
+    margin-top: -80px;
+    object-fit: contain;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}
+
+.scroll-img {
+    height: 100px;
+    width: 45px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .header-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .navbar {
+        align-items: center;
+        align-items: center;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        display: flex;
+    }
+
+    .logo {
+        width: 100px;
+        height: 60px;
+    }
+
+    .legion-buttons {
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: left;
+        gap: 10px;
+        background-color: rgba(75, 0, 56, 0.192);
+        border-radius: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.048);
+        backdrop-filter: blur(8px);
+        position: absolute;
+        top: 63px;
+        width: calc(200px - 40px);
+        right: 10px;
+        align-items: flex-start;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .legion-buttons.show {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .menu-button {
+        font-size: 20px;
+        color: white;
+        background: transparent;
+        border: none;
+        display: block; /* Bu kural, butonu görünür yapıyor */
+        cursor: pointer;
+    }
+}
+
+.h1 {
+    font-size: 35.1px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: rgba(5, 5, 5, 0.938);
+}
+
+.desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    font-size: 17.5px;
+    margin-top: -3px;
+    margin-bottom: 20px;
+    color: #131313a8;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

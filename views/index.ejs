@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legion</title>
+  <link rel="stylesheet" href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css">
+    <link rel="icon" type="image/png" href="/img/logov.png">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  <nav class="header">
+    <div class="header-container">
+      <div class="navbar">
+        <a href="/"><img src="/img/Legion.gif" alt="Logo" class="logo"></a>
+        <button class="menu-button" onclick="toggleMenu()"> 
+          <i id="menuIcon" class="fa-regular fa-bars"></i> 
+        </button>
+        <div class="legion-buttons">
+          <a href="/music">Müzikler</a>
+          <a href="/about">Hakkında</a>
+          <a href="/contact">İletişim</a>
+        </div>
+      </div>
+      <div class="header-main">
+        <img src="/img/tagtext.gif" class="tag-img" alt="Tag">
+        <img src="/img/girislogo.png" class="giris-logo" alt="Logo">
+        <img src="/img/scroll2.gif" class="scroll-img" alt="Scroll">
+      </div>
+    </div>
+  </nav>
+
+  <div class="istek-cont">
+    <p class="h1">Ne Tarzda Bir Beat İstersiniz?</ğp>
+    <p class="desc">Benimle Mail Yoluyla İletişime Geçin</p>
+    <a href=""><img src="/img/gmail.png" alt="Gmail"> Mail Gönder</a>
+  </div>
+
+  <div class="lisans">
+    <p class="h1">Yada Bir Beat mi Lisanslamak İstiyorsunuz?</p>
+    <p class="desc">Lisans Seçenekleri</p>
+    <div class="plans">
+        <div class="plan">
+            <p class="plan-title">Basic</p>
+            <div class="fiyat">899,9₺</div>
+            <p class="text">Beat Başına</p>
+
+            <p class="text"></p>
+            <div class="ozellikler">
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Tag'siz MP3</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> 2.000 Satış Hakkı</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> 50.000 Dinlenme Limiti</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Başlık ve Açıklamada (Prod. Legion) İfadesine Yer Verilmelidir</p>
+            </div>
+            <a href="" class="satin-al">Satın Al</a>
+        </div>
+        <div class="plan">
+            <p class="plan-title">Premium</p>
+            <div class="fiyat">1499,9₺</div>
+            <p class="text">Beat Başına</p>
+            <div class="ozellikler">
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Tag'siz WAV</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> 50.000 Satış Hakkı</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> 100.000 Dinlenme Limiti</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Başlık ve Açıklamada (Prod. Legion) İfadesine Yer Verilmelidir</p>
+            </div>
+            <a href="" class="satin-al">Satın Al</a>
+        </div>
+        <div class="plan">
+            <p class="plan-title">Unlimited</p>
+            <div class="fiyat">2499,9₺</div>
+            <p class="text">Beat Başına</p>
+            <div class="ozellikler">
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Tag'siz WAV + Parça Bileşenleri</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Sınırsız Satış Hakkı</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Sınırsız Dinlenme Limiti</p>
+                <p class="ozellik"><i class="fa-regular fa-minus"></i> Başlık ve Açıklamada (Prod. Legion) İfadesine Yer Verilmelidir</p>
+            </div>
+            <a href="" class="satin-al">Satın Al</a>
+        </div>
+    </div>
+
+    
+  </div>
+
+  <div class="spotfy">
+    <div class="spotfy-cont">
+        <iframe class="spotify" style="border-radius:12px" src="https://open.spotify.com/embed/artist/2J4vMbAvwGpCXqtvbjD3Xx?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="spotfy-left">
+            <p class="sp-desc">Ritmi Her Yerde Dinleyin</p>
+            <p class="sp-title">Spotify'dan Takip Et</p>
+            <a href="" class="spotfy-button"><img src="/img/spotify.png" alt="">Dinlemeye Başla</a>
+        </div>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <p class="h1">Yorum Yapın</p>
+    <p class="desc">Bana Mesaj Gönder</p>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">İsminiz</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Mail Adresiniz</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Mesajınızı Yazın (İsteğe Bağlı)</label>
+        <textarea id="message" rows="5" ></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Gönder</button>
+    </form>
+  </section>
+  
+  
+  <%- include('includes/scroll-button') %>
+  <%- include('includes/footer') %>
+  <script src="/js/menu.js"></script>
+</body>
+
+</html>
